@@ -9,8 +9,8 @@ Projeto LECC - Localizador para Empresas em Caso de Catástrofe
 - Docker
     - It requires WSL to be installed and updated
        - On a command line, do:
-           - wsl.exe --install
-           - wsl.exe --update
+           - ´wsl.exe --install´
+           - ´wsl.exe --update´
     - Make sure the Docker Engine is up and running, after getting WSL worked out.
 - OSGeo4W : https://trac.osgeo.org/osgeo4w/
     - Make sure to install it under C:\OSGeo4W
@@ -27,32 +27,33 @@ Projeto LECC - Localizador para Empresas em Caso de Catástrofe
 
 - Go into the folder where you cloned the project
 - Inside the folder, run:
-    - create-venv.bat
+    - ´create-venv.bat´
 
 ## Activate the virtual env and install required libs
 
 - Every time when you start the project, make sure you are in the virtual env
 - To activate the virtual env, do:
-    - cd .ven
-    - cd Scripts
-    - activate
+    - ´cd .venv´
+    - ´cd Scripts´
+    - ´activate´
 - This can be automated in your IDE to avoid this every time
     - On vscode, install the Python extension from Microsoft
 - To install all the necessary Python libraries for the project, run:
-    - pip install -r requirements.txt
+    - ´pip install -r requirements.txt´
     - this will install django, psycopg and other libs listed in requirements.txt
 
 ## Start the database
 
 - For the Django project to run, you need to have the database up and running. 
-- Call the file start-db.bat
+- Call the file 
+    - ´start-db.bat´
     - this file will start all the containers defined in the docker-compose.yml file.
 
 ## Run Migrations (create the database tables)
 
 - You need to run the migrations that will setup the basic database tables
 - The databse container should be running
-- command: python manage.py migrate
+- command: ´python manage.py migrate´
 
 ## Start the Django development server
 
